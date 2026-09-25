@@ -1,0 +1,288 @@
+{
+  "tool": {
+    "id": "escore-air-apendicite",
+    "title": "Escore AIR (Appendicitis Inflammatory Response)",
+    "short": "Apendicite aguda com leucócitos, neutrófilos e PCR",
+    "desc": "Calcule o escore AIR na suspeita de apendicite aguda: vômitos, dor, defesa, febre, leucócitos, neutrófilos e PCR, com baixa, média ou alta probabilidade.",
+    "lead": "Escore de 0 a 12 pontos que inclui a PCR e a intensidade da irritação peritoneal para classificar a suspeita de apendicite aguda em baixa, indeterminada ou alta probabilidade.",
+    "spec": [
+      "cirurgia-geral",
+      "medicina-de-emergencia",
+      "cirurgia-pediatrica"
+    ],
+    "tier": 1,
+    "fields": [
+      [
+        "vomito",
+        "Vômitos",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "dor",
+        "Dor na fossa ilíaca direita",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "defesa",
+        "Descompressão dolorosa ou defesa muscular",
+        "radio",
+        {
+          "opts": {
+            "0": "Ausente",
+            "1": "Leve",
+            "2": "Moderada",
+            "3": "Intensa"
+          }
+        }
+      ],
+      [
+        "temp",
+        "Temperatura ≥ 38,5 °C",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "neut",
+        "Neutrófilos",
+        "radio",
+        {
+          "opts": {
+            "0": "&lt; 70%",
+            "1": "70 a 84%",
+            "2": "≥ 85%"
+          }
+        }
+      ],
+      [
+        "leuco",
+        "Leucócitos",
+        "radio",
+        {
+          "opts": {
+            "0": "&lt; 10.000/mm³",
+            "1": "10.000 a 14.900/mm³",
+            "2": "≥ 15.000/mm³"
+          }
+        }
+      ],
+      [
+        "pcr",
+        "Proteína C reativa",
+        "radio",
+        {
+          "opts": {
+            "0": "&lt; 10 mg/L",
+            "1": "10 a 49 mg/L",
+            "2": "≥ 50 mg/L"
+          }
+        }
+      ]
+    ],
+    "score": {
+      "label": "Escore AIR",
+      "unit": "de 12",
+      "bands": [
+        [
+          0,
+          "low",
+          "Baixa probabilidade (0 a 4)",
+          "Alta com reavaliação se os sintomas persistirem, em paciente com seguimento garantido."
+        ],
+        [
+          5,
+          "mid",
+          "Probabilidade indeterminada (5 a 8)",
+          "Observação ativa com reavaliação clínica e laboratorial e/ou exame de imagem."
+        ],
+        [
+          9,
+          "high",
+          "Alta probabilidade (9 a 12)",
+          "Avaliação cirúrgica."
+        ]
+      ]
+    },
+    "formula": "<p>Vômitos (1) + dor na fossa ilíaca direita (1) + irritação peritoneal leve (1), moderada (2) ou intensa (3) + temperatura ≥ 38,5 °C (1) + neutrófilos 70–84% (1) ou ≥ 85% (2) + leucócitos 10.000–14.900 (1) ou ≥ 15.000 (2) + PCR 10–49 (1) ou ≥ 50 mg/L (2). Total de 0 a 12.</p>",
+    "table": [
+      [
+        "Pontos",
+        "Probabilidade de apendicite"
+      ],
+      [
+        "0 a 4",
+        "Baixa"
+      ],
+      [
+        "5 a 8",
+        "Indeterminada"
+      ],
+      [
+        "9 a 12",
+        "Alta"
+      ]
+    ],
+    "tips": [
+      "No estudo original, o AIR superou o Alvarado (área ROC 0,97 contra 0,92 para apendicite avançada) e classificou 63% dos pacientes em baixa ou alta probabilidade com acurácia de 97,2%.",
+      "A PCR está em <strong>mg/L</strong>: se o laboratório liberar em mg/dL, multiplique por 10.",
+      "Na faixa indeterminada, a reavaliação após algumas horas com novo leucograma e PCR aumenta a precisão; use imagem conforme o perfil do paciente.",
+      "A WSES 2020 recomenda o AIR ou o AAS para reduzir tomografias desnecessárias em adultos com suspeita de apendicite."
+    ],
+    "sources": [
+      [
+        "Andersson M, Andersson RE. The appendicitis inflammatory response score: a tool for the diagnosis of acute appendicitis that outperforms the Alvarado score. World J Surg, 2008.",
+        "https://doi.org/10.1007/s00268-008-9649-y"
+      ],
+      [
+        "Di Saverio S et al. Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines. World J Emerg Surg, 2020.",
+        "https://doi.org/10.1186/s13017-020-00306-3"
+      ]
+    ],
+    "cases": [
+      [
+        "Dor na FID, defesa leve e leucócitos 10.000–14.900: 3 pontos (baixa)",
+        {
+          "dor": true,
+          "defesa": "1",
+          "neut": "0",
+          "leuco": "1",
+          "pcr": "0"
+        },
+        {
+          "score": 3,
+          "level": "low"
+        }
+      ],
+      [
+        "Vômitos, dor, defesa moderada, neutrófilos 70–84% e PCR 10–49: 6 pontos (indeterminada)",
+        {
+          "vomito": true,
+          "dor": true,
+          "defesa": "2",
+          "neut": "1",
+          "leuco": "0",
+          "pcr": "1"
+        },
+        {
+          "score": 6,
+          "level": "mid"
+        }
+      ],
+      [
+        "Vômitos, dor, defesa intensa, febre, neutrófilos ≥ 85%, leucócitos ≥ 15.000: 10 pontos (alta)",
+        {
+          "vomito": true,
+          "dor": true,
+          "defesa": "3",
+          "temp": true,
+          "neut": "2",
+          "leuco": "2",
+          "pcr": "0"
+        },
+        {
+          "score": 10,
+          "level": "high"
+        }
+      ]
+    ],
+    "batch": "renal-digestivo",
+    "kind": "Escore",
+    "config": {
+      "unit": "de 12",
+      "label": "Escore AIR",
+      "fields": [
+        [
+          "vomito",
+          "chk",
+          1
+        ],
+        [
+          "dor",
+          "chk",
+          1
+        ],
+        [
+          "defesa",
+          "radio",
+          0
+        ],
+        [
+          "temp",
+          "chk",
+          1
+        ],
+        [
+          "neut",
+          "radio",
+          0
+        ],
+        [
+          "leuco",
+          "radio",
+          0
+        ],
+        [
+          "pcr",
+          "radio",
+          0
+        ]
+      ],
+      "bands": [
+        [
+          0,
+          "low",
+          "Baixa probabilidade (0 a 4)",
+          "Alta com reavaliação se os sintomas persistirem, em paciente com seguimento garantido."
+        ],
+        [
+          5,
+          "mid",
+          "Probabilidade indeterminada (5 a 8)",
+          "Observação ativa com reavaliação clínica e laboratorial e/ou exame de imagem."
+        ],
+        [
+          9,
+          "high",
+          "Alta probabilidade (9 a 12)",
+          "Avaliação cirúrgica."
+        ]
+      ]
+    },
+    "areaId": "renal-digestivo",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/renal-digestivo.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/renal-digestivo.php",
+    "sha256": "95087d729438637d36e1a49af04d8de0fe1d9f7876443084443906a9281ef107",
+    "bytes": 109421
+  },
+  "clinicalValidation": "not-performed"
+}

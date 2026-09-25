@@ -1,0 +1,74 @@
+[
+  {
+    "label": "Dor na FID, defesa leve e leucócitos 10.000–14.900: 3 pontos (baixa)",
+    "input": {
+      "dor": true,
+      "defesa": "1",
+      "neut": "0",
+      "leuco": "1",
+      "pcr": "0"
+    },
+    "expected": {
+      "score": 3,
+      "level": "low"
+    },
+    "originalInput": {
+      "dor": true,
+      "defesa": "1",
+      "neut": "0",
+      "leuco": "1",
+      "pcr": "0"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Vômitos, dor, defesa moderada, neutrófilos 70–84% e PCR 10–49: 6 pontos (indeterminada)",
+    "input": {
+      "vomito": true,
+      "dor": true,
+      "defesa": "2",
+      "neut": "1",
+      "leuco": "0",
+      "pcr": "1"
+    },
+    "expected": {
+      "score": 6,
+      "level": "mid"
+    },
+    "originalInput": {
+      "vomito": true,
+      "dor": true,
+      "defesa": "2",
+      "neut": "1",
+      "leuco": "0",
+      "pcr": "1"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Vômitos, dor, defesa intensa, febre, neutrófilos ≥ 85%, leucócitos ≥ 15.000: 10 pontos (alta)",
+    "input": {
+      "vomito": true,
+      "dor": true,
+      "defesa": "3",
+      "temp": true,
+      "neut": "2",
+      "leuco": "2",
+      "pcr": "0"
+    },
+    "expected": {
+      "score": 10,
+      "level": "high"
+    },
+    "originalInput": {
+      "vomito": true,
+      "dor": true,
+      "defesa": "3",
+      "temp": true,
+      "neut": "2",
+      "leuco": "2",
+      "pcr": "0"
+    },
+    "expandedZeroOptions": []
+  }
+]

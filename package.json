@@ -1,7 +1,7 @@
 {
   "name": "@elucenia/tool-escore-air-apendicite",
   "version": "0.1.0",
-  "description": "Escore AIR (Appendicitis Inflammatory Response) · Elucenia: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
+  "description": "Escore AIR (Appendicitis Inflammatory Response) · ELUCENIA: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
   "keywords": [
     "elucenia",
     "medical-calculator",

@@ -1,11 +1,11 @@
-/* tool-escore-air-apendicite · Elucenia · https://github.com/Elucenia/tool-escore-air-apendicite
-   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+/* tool-escore-air-apendicite · ELUCENIA · https://github.com/Elucenia/tool-escore-air-apendicite
+   Copyright (c) 2026 ELUCENIA · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
    Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"escore-air-apendicite","title":"Escore AIR (Appendicitis Inflammatory Response)","fields":[["vomito","Vômitos","chk",{"pts":1}],["dor","Dor na fossa ilíaca direita","chk",{"pts":1}],["defesa","Descompressão dolorosa ou defesa muscular","radio",{"opts":{"0":"Ausente","1":"Leve","2":"Moderada","3":"Intensa"}}],["temp","Temperatura ≥ 38,5 °C","chk",{"pts":1}],["neut","Neutrófilos","radio",{"opts":{"0":"&lt; 70%","1":"70 a 84%","2":"≥ 85%"}}],["leuco","Leucócitos","radio",{"opts":{"0":"&lt; 10.000/mm³","1":"10.000 a 14.900/mm³","2":"≥ 15.000/mm³"}}],["pcr","Proteína C reativa","radio",{"opts":{"0":"&lt; 10 mg/L","1":"10 a 49 mg/L","2":"≥ 50 mg/L"}}]],"config":{"unit":"de 12","label":"Escore AIR","fields":[["vomito","chk",1],["dor","chk",1],["defesa","radio",0],["temp","chk",1],["neut","radio",0],["leuco","radio",0],["pcr","radio",0]],"bands":[[0,"low","Baixa probabilidade (0 a 4)","Alta com reavaliação se os sintomas persistirem, em paciente com seguimento garantido."],[5,"mid","Probabilidade indeterminada (5 a 8)","Observação ativa com reavaliação clínica e laboratorial e/ou exame de imagem."],[9,"high","Alta probabilidade (9 a 12)","Avaliação cirúrgica."]]},"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};

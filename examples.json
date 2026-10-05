@@ -1,52 +1,107 @@
 [
   {
-    "label": "Dor na FID, defesa leve e leucócitos 10.000–14.900: 3 pontos (baixa)",
-    "input": {
+    "id": "escore-air-apendicite",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Dor na FID, defesa leve e leucócitos 10.000–14.900: 3 pontos (baixa)",
+    "originalInput": {
       "dor": true,
       "defesa": "1",
       "neut": "0",
       "leuco": "1",
       "pcr": "0"
+    },
+    "input": {
+      "dor": true,
+      "defesa": "1",
+      "neut": "0",
+      "leuco": "1",
+      "pcr": "0",
+      "vomito": false,
+      "temp": false
     },
     "expected": {
       "score": 3,
       "level": "low"
     },
-    "originalInput": {
-      "dor": true,
-      "defesa": "1",
-      "neut": "0",
-      "leuco": "1",
-      "pcr": "0"
+    "recordedResult": {
+      "main": [
+        "3",
+        "de 12"
+      ],
+      "label": "Escore AIR",
+      "raw": {
+        "score": 3
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Vômitos, dor, defesa moderada, neutrófilos 70–84% e PCR 10–49: 6 pontos (indeterminada)",
+    "id": "escore-air-apendicite",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Vômitos, dor, defesa moderada, neutrófilos 70–84% e PCR 10–49: 6 pontos (indeterminada)",
+    "originalInput": {
+      "vomito": true,
+      "dor": true,
+      "defesa": "2",
+      "neut": "1",
+      "leuco": "0",
+      "pcr": "1"
+    },
     "input": {
       "vomito": true,
       "dor": true,
       "defesa": "2",
       "neut": "1",
       "leuco": "0",
-      "pcr": "1"
+      "pcr": "1",
+      "temp": false
     },
     "expected": {
       "score": 6,
       "level": "mid"
     },
+    "recordedResult": {
+      "main": [
+        "6",
+        "de 12"
+      ],
+      "label": "Escore AIR",
+      "raw": {
+        "score": 6
+      }
+    },
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "escore-air-apendicite",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "Vômitos, dor, defesa intensa, febre, neutrófilos ≥ 85%, leucócitos ≥ 15.000: 10 pontos (alta)",
     "originalInput": {
       "vomito": true,
       "dor": true,
-      "defesa": "2",
-      "neut": "1",
-      "leuco": "0",
-      "pcr": "1"
+      "defesa": "3",
+      "temp": true,
+      "neut": "2",
+      "leuco": "2",
+      "pcr": "0"
     },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "Vômitos, dor, defesa intensa, febre, neutrófilos ≥ 85%, leucócitos ≥ 15.000: 10 pontos (alta)",
     "input": {
       "vomito": true,
       "dor": true,
@@ -60,15 +115,23 @@
       "score": 10,
       "level": "high"
     },
-    "originalInput": {
-      "vomito": true,
-      "dor": true,
-      "defesa": "3",
-      "temp": true,
-      "neut": "2",
-      "leuco": "2",
-      "pcr": "0"
+    "recordedResult": {
+      "main": [
+        "10",
+        "de 12"
+      ],
+      "label": "Escore AIR",
+      "raw": {
+        "score": 10
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]

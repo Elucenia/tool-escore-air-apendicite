@@ -1,0 +1,289 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean vomito",
+    "input": {
+      "dor": true,
+      "defesa": "1",
+      "neut": "0",
+      "leuco": "1",
+      "pcr": "0",
+      "vomito": "2",
+      "temp": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vomito"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean dor",
+    "input": {
+      "dor": "2",
+      "defesa": "1",
+      "neut": "0",
+      "leuco": "1",
+      "pcr": "0",
+      "vomito": false,
+      "temp": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "dor"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field defesa",
+    "input": {
+      "dor": true,
+      "neut": "0",
+      "leuco": "1",
+      "pcr": "0",
+      "vomito": false,
+      "temp": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "defesa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field defesa",
+    "input": {
+      "dor": true,
+      "defesa": "",
+      "neut": "0",
+      "leuco": "1",
+      "pcr": "0",
+      "vomito": false,
+      "temp": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "defesa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option defesa",
+    "input": {
+      "dor": true,
+      "defesa": "__ELUCENIA_INVALID_OPTION__",
+      "neut": "0",
+      "leuco": "1",
+      "pcr": "0",
+      "vomito": false,
+      "temp": false
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "defesa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean temp",
+    "input": {
+      "dor": true,
+      "defesa": "1",
+      "neut": "0",
+      "leuco": "1",
+      "pcr": "0",
+      "vomito": false,
+      "temp": "2"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "temp"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field neut",
+    "input": {
+      "dor": true,
+      "defesa": "1",
+      "leuco": "1",
+      "pcr": "0",
+      "vomito": false,
+      "temp": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "neut"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field neut",
+    "input": {
+      "dor": true,
+      "defesa": "1",
+      "neut": "",
+      "leuco": "1",
+      "pcr": "0",
+      "vomito": false,
+      "temp": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "neut"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option neut",
+    "input": {
+      "dor": true,
+      "defesa": "1",
+      "neut": "__ELUCENIA_INVALID_OPTION__",
+      "leuco": "1",
+      "pcr": "0",
+      "vomito": false,
+      "temp": false
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "neut"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field leuco",
+    "input": {
+      "dor": true,
+      "defesa": "1",
+      "neut": "0",
+      "pcr": "0",
+      "vomito": false,
+      "temp": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "leuco"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field leuco",
+    "input": {
+      "dor": true,
+      "defesa": "1",
+      "neut": "0",
+      "leuco": "",
+      "pcr": "0",
+      "vomito": false,
+      "temp": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "leuco"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option leuco",
+    "input": {
+      "dor": true,
+      "defesa": "1",
+      "neut": "0",
+      "leuco": "__ELUCENIA_INVALID_OPTION__",
+      "pcr": "0",
+      "vomito": false,
+      "temp": false
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "leuco"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field pcr",
+    "input": {
+      "dor": true,
+      "defesa": "1",
+      "neut": "0",
+      "leuco": "1",
+      "vomito": false,
+      "temp": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pcr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field pcr",
+    "input": {
+      "dor": true,
+      "defesa": "1",
+      "neut": "0",
+      "leuco": "1",
+      "pcr": "",
+      "vomito": false,
+      "temp": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pcr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option pcr",
+    "input": {
+      "dor": true,
+      "defesa": "1",
+      "neut": "0",
+      "leuco": "1",
+      "pcr": "__ELUCENIA_INVALID_OPTION__",
+      "vomito": false,
+      "temp": false
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "pcr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

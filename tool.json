@@ -5,28 +5,24 @@
     "short": "Apendicite aguda com leucócitos, neutrófilos e PCR",
     "desc": "Calcule o escore AIR na suspeita de apendicite aguda: vômitos, dor, defesa, febre, leucócitos, neutrófilos e PCR, com baixa, média ou alta probabilidade.",
     "lead": "Escore de 0 a 12 pontos que inclui a PCR e a intensidade da irritação peritoneal para classificar a suspeita de apendicite aguda em baixa, indeterminada ou alta probabilidade.",
+    "kind": "Escore",
     "spec": [
       "cirurgia-geral",
       "medicina-de-emergencia",
       "cirurgia-pediatrica"
     ],
-    "tier": 1,
     "fields": [
       [
         "vomito",
         "Vômitos",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "dor",
         "Dor na fossa ilíaca direita",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "defesa",
@@ -45,9 +41,7 @@
         "temp",
         "Temperatura ≥ 38,5 °C",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "neut",
@@ -86,55 +80,7 @@
         }
       ]
     ],
-    "score": {
-      "label": "Escore AIR",
-      "unit": "de 12",
-      "bands": [
-        [
-          0,
-          "low",
-          "Baixa probabilidade (0 a 4)",
-          "Alta com reavaliação se os sintomas persistirem, em paciente com seguimento garantido."
-        ],
-        [
-          5,
-          "mid",
-          "Probabilidade indeterminada (5 a 8)",
-          "Observação ativa com reavaliação clínica e laboratorial e/ou exame de imagem."
-        ],
-        [
-          9,
-          "high",
-          "Alta probabilidade (9 a 12)",
-          "Avaliação cirúrgica."
-        ]
-      ]
-    },
     "formula": "<p>Vômitos (1) + dor na fossa ilíaca direita (1) + irritação peritoneal leve (1), moderada (2) ou intensa (3) + temperatura ≥ 38,5 °C (1) + neutrófilos 70–84% (1) ou ≥ 85% (2) + leucócitos 10.000–14.900 (1) ou ≥ 15.000 (2) + PCR 10–49 (1) ou ≥ 50 mg/L (2). Total de 0 a 12.</p>",
-    "table": [
-      [
-        "Pontos",
-        "Probabilidade de apendicite"
-      ],
-      [
-        "0 a 4",
-        "Baixa"
-      ],
-      [
-        "5 a 8",
-        "Indeterminada"
-      ],
-      [
-        "9 a 12",
-        "Alta"
-      ]
-    ],
-    "tips": [
-      "No estudo original, o AIR superou o Alvarado (área ROC 0,97 contra 0,92 para apendicite avançada) e classificou 63% dos pacientes em baixa ou alta probabilidade com acurácia de 97,2%.",
-      "A PCR está em <strong>mg/L</strong>: se o laboratório liberar em mg/dL, multiplique por 10.",
-      "Na faixa indeterminada, a reavaliação após algumas horas com novo leucograma e PCR aumenta a precisão; use imagem conforme o perfil do paciente.",
-      "A WSES 2020 recomenda o AIR ou o AAS para reduzir tomografias desnecessárias em adultos com suspeita de apendicite."
-    ],
     "sources": [
       [
         "Andersson M, Andersson RE. The appendicitis inflammatory response score: a tool for the diagnosis of acute appendicitis that outperforms the Alvarado score. World J Surg, 2008.",
@@ -143,6 +89,10 @@
       [
         "Di Saverio S et al. Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines. World J Emerg Surg, 2020.",
         "https://doi.org/10.1186/s13017-020-00306-3"
+      ],
+      [
+        "Andersson M, Andersson RE. Erratum to: The Appendicitis Inflammatory Response Score: A Tool for the Diagnosis of Acute Appendicitis that Outperforms the Alvarado Score. World J Surg, 2012;36:2269–2270. Corrected Tables 2 and 7.",
+        "https://doi.org/10.1007/s00268-012-1679-9"
       ]
     ],
     "cases": [
@@ -192,69 +142,6 @@
         }
       ]
     ],
-    "kind": "Escore",
-    "config": {
-      "unit": "de 12",
-      "label": "Escore AIR",
-      "fields": [
-        [
-          "vomito",
-          "chk",
-          1
-        ],
-        [
-          "dor",
-          "chk",
-          1
-        ],
-        [
-          "defesa",
-          "radio",
-          0
-        ],
-        [
-          "temp",
-          "chk",
-          1
-        ],
-        [
-          "neut",
-          "radio",
-          0
-        ],
-        [
-          "leuco",
-          "radio",
-          0
-        ],
-        [
-          "pcr",
-          "radio",
-          0
-        ]
-      ],
-      "bands": [
-        [
-          0,
-          "low",
-          "Baixa probabilidade (0 a 4)",
-          "Alta com reavaliação se os sintomas persistirem, em paciente com seguimento garantido."
-        ],
-        [
-          5,
-          "mid",
-          "Probabilidade indeterminada (5 a 8)",
-          "Observação ativa com reavaliação clínica e laboratorial e/ou exame de imagem."
-        ],
-        [
-          9,
-          "high",
-          "Alta probabilidade (9 a 12)",
-          "Avaliação cirúrgica."
-        ]
-      ]
-    },
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -263,17 +150,598 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T19:14:05.365Z",
+      "total": 864,
+      "passed": 864,
+      "sourceRowCount": 864,
+      "uniqueApiInputCount": 864,
+      "sourceContextCount": 864,
+      "embeddedCasesAreSubset": true,
+      "embeddedCaseCount": 4,
+      "caseStorage": {
+        "mode": "complete-downloadable-bank-with-inline-subset",
+        "file": "independent-source-cases.json",
+        "sha256": "856a85fa46a691657f51e1760e34bfc3686b43657c83f5cfa73d1a7b2f3a9349",
+        "total": 864,
+        "bankRowCount": 864,
+        "uniqueApiInputCount": 864,
+        "sourceContextCount": 864,
+        "expectedEvidence": [
+          {
+            "file": "reports/review-20261003/bode-air-westley-independent-expectations-final27.json",
+            "sha256": "c9e48c4a30ce6274824338a102cb61f780573fafbe6e462205ba7d9312b53da1"
+          },
+          {
+            "file": "reports/review-20261003/bode-air-westley-primary-observations-final27.cjs",
+            "sha256": "52110d475ffed2282f3faad540747cb42330c2aee2727f87ec867c157c824322"
+          }
+        ],
+        "obtainedEvidence": {
+          "file": "reports/review-20261003/bode-air-westley-independent-source-check-final27.json",
+          "sha256": "ee5c83853da827d687151724fd2a6c2e51dfa04543d1dd75e6697ffa5c003622"
+        },
+        "packagingRequirement": "Compose independent source/citation/edition/rubric changes using owned JSON recipes, then bind fresh source/build/package/browser proofs before publication."
+      },
+      "inputIdentity": {
+        "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+        "sourceRows": 864,
+        "uniqueApiInputs": 864,
+        "duplicateRows": 0,
+        "expectationAudit": {
+          "file": "reports/review-20261003/bode-air-westley-independent-expectations-final27.json",
+          "sha256": "c9e48c4a30ce6274824338a102cb61f780573fafbe6e462205ba7d9312b53da1"
+        }
+      },
+      "scope": "864 retained selected-point scenarios: exact raw.score sum of seven previously selected categorical/checkbox inputs according to the directly read author erratum Tables2/7 (2012). No raw clinical measurement classifier, risk band, diagnosis, surgery or 2021 cutoff conformance.",
+      "sources": [
+        {
+          "id": "escore-air-apendicite",
+          "primaryObservations": {
+            "file": "reports/review-20261003/bode-air-westley-primary-observations-final27.cjs",
+            "sha256": "52110d475ffed2282f3faad540747cb42330c2aee2727f87ec867c157c824322"
+          },
+          "sources": [
+            {
+              "doi": "10.1007/s00268-008-9649-y",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/18553045/",
+              "access": "Original2008 abstract read directly; full publisher HTML/PDF resolved to abstract, not complete original article.",
+              "readScope": "Abstract describes545patients,316derivation/229evaluation; eight original explanatory variables grouped into the simplified instrument. Original full table not claimed."
+            },
+            {
+              "doi": "10.1007/s00268-012-1679-9",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1007/s00268-012-1679-9",
+              "access": "Official free-access2012 erratum full HTML available and read directly.",
+              "readScope": "Erratum paragraph and corrected Tables2+7: CRP concentration correction, simplified item weights, units and original0–4/5–8/9–12 groups."
+            },
+            {
+              "doi": "10.1007/s00268-021-06042-2",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8154764/",
+              "access": "Official PMC2021 primary validation article opened directly.",
+              "readScope": "Table1, Patients andMethods, Fig1caption and cutoff-validation paragraph; proposed low cutoff changes from<5 to<4. Not an undocumented substitution for original2008/2012 scoring policy."
+            }
+          ],
+          "scope": "All864 combinations of seven already selected categorical/checkbox point inputs, checking exact integer sum only. Temperature/laboratory units, cutoffs and inclusivity read from corrected2012 primary tables; no raw continuous clinical measurements are classified by this test because the implementation accepts selected categories.",
+          "limitations": "Original2008 full article was inaccessible, but its2012 author erratum corrected scoring tables is directly available. Do not cite uncorrected CRP tables as approved.2021 validation revised the low cutoff and population/context differs; no risk bands, diagnosis, imaging/surgery decisions or predictive performance are approved by categorical-sum replay. Missing/unobserved clinical findings must not be treated as absent by this synthetic coverage.",
+          "fullOriginalRead": false
+        }
+      ],
+      "evidencePath": "reports/review-20261003/bode-air-westley-independent-source-check-final27.json",
+      "evidenceSha256": "ee5c83853da827d687151724fd2a6c2e51dfa04543d1dd75e6697ffa5c003622",
+      "independentPeer": {
+        "status": "passed-scoped-numeric",
+        "evidence": {
+          "file": "reports/review-20261003/bode-air-westley-independent-peer-verify-final27.json",
+          "sha256": "46733e24c64444edfdb18f992c6afca03602c57bd9ea0320bb04b1d1ebf2c64b"
+        },
+        "scope": "Independent source tables/own integer expectations and three adapters in Node/VM/Chromium. Clinical/professional-language/rights/full-method approval not performed."
+      },
+      "recordedAdapterExecutions": 2592,
+      "recordedVmExecutions": 2592,
+      "recordedChromiumExecutions": 2592,
+      "freshAdapterExecutions": 2592,
+      "freshVmExecutions": 2592,
+      "implementations": [
+        {
+          "id": "escore-air-apendicite",
+          "app": "website",
+          "file": "apps/website/private/tool-code/escore-air-apendicite/calculator.js",
+          "sha256": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482"
+        },
+        {
+          "id": "escore-air-apendicite",
+          "app": "dashboard",
+          "file": "apps/dashboard/private/tool-code/escore-air-apendicite/calculator.js",
+          "sha256": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482"
+        },
+        {
+          "id": "escore-air-apendicite",
+          "app": "command-center",
+          "file": "apps/command-center/private/tool-code/escore-air-apendicite/calculator.js",
+          "sha256": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482"
+        }
+      ],
+      "qualifications": [
+        "Original2008 full article was inaccessible, but its2012 author erratum corrected scoring tables is directly available. Do not cite uncorrected CRP tables as approved.2021 validation revised the low cutoff and population/context differs; no risk bands, diagnosis, imaging/surgery decisions or predictive performance are approved by categorical-sum replay. Missing/unobserved clinical findings must not be treated as absent by this synthetic coverage.",
+        "Only numeric raw.score is included in the package replay. Main text, raw quartiles/levels, note/verdict/rows, mortality probabilities, diagnostic or therapeutic decisions are not approved by this scoped bank.",
+        "The complete bank preserves every stored source scenario and exact input identity; mirror/runtime executions do not multiply case counts. Three adapters were actually checked in Node, isolated VM and isolated Chromium in the linked original receipt, and Node/VM were freshly replayed for preparation.",
+        "All 862 historic source fixtures and tolerances remain byte-identical. Four inline records are only a subset of the complete downloadable source bank.",
+        "Source citation/edition/rubric and localized-content amendments are separately owned; this evidence candidate must be composed using its JSON field recipes, not by overwriting subsequently amended catalogs. Fresh build/package/browser checks remain required before publication."
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "metadataPackagingPeer": {
+        "status": "passed",
+        "scope": "Bounded independent review of the original source bank and its metadata/helper. Prospective code rebinding is separately re-executed below and requires the final composition peer; no human approval inferred.",
+        "peer": {
+          "file": "reports/review-20261003/bode-air-westley-bank-metadata-independent-review-western-final27.json",
+          "sha256": "39bf252ecd473902ea653e1b6384d6bc7db6d4a401347abdce3dab4c98e24dc0"
+        },
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed"
+      },
+      "prospectiveSource27Bindings": [
+        {
+          "file": "apps/website/private/tool-code/escore-air-apendicite/calculator.js",
+          "sha256": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482"
+        },
+        {
+          "file": "apps/dashboard/private/tool-code/escore-air-apendicite/calculator.js",
+          "sha256": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482"
+        },
+        {
+          "file": "apps/command-center/private/tool-code/escore-air-apendicite/calculator.js",
+          "sha256": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482"
+        }
+      ],
+      "prospectiveSource27Replay": {
+        "file": "reports/review-20261003/source27-complete-bank-current-replay-root-r3.json",
+        "sha256": "44c601f27d3d5051a8d55a581381112b58df36c7c4b6cfd24ce1249b263d6a2b"
+      },
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "AIR de Andersson (2008), com as Tabelas 2 e 7 corrigidas pela errata de 2012: sete componentes, total 0–12, PCR em mg/L; grupos originais 0–4, 5–8 e 9–12. A mudança do corte inferior proposta em 2021 não foi aplicada.",
+    "implementationVersion": "escore-air-apendicite@native-2026-10-03+c4cc43ad97bd",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/18553045/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Vômitos (1) + dor na fossa ilíaca direita (1) + irritação peritoneal leve (1), moderada (2) ou intensa (3) + temperatura ≥ 38,5 °C (1) + neutrófilos 70–84% (1) ou ≥ 85% (2) + leucócitos 10.000–14.900 (1) ou ≥ 15.000 (2) + PCR 10–49 (1) ou ≥ 50 mg/L (2). Total de 0 a 12.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "vomito",
+            "label": "Vômitos",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "dor",
+            "label": "Dor na fossa ilíaca direita",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "defesa",
+            "label": "Descompressão dolorosa ou defesa muscular",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Ausente",
+              "1": "Leve",
+              "2": "Moderada",
+              "3": "Intensa"
+            }
+          },
+          {
+            "key": "temp",
+            "label": "Temperatura ≥ 38,5 °C",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "neut",
+            "label": "Neutrófilos",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "&lt; 70%",
+              "1": "70 a 84%",
+              "2": "≥ 85%"
+            }
+          },
+          {
+            "key": "leuco",
+            "label": "Leucócitos",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "&lt; 10.000/mm³",
+              "1": "10.000 a 14.900/mm³",
+              "2": "≥ 15.000/mm³"
+            }
+          },
+          {
+            "key": "pcr",
+            "label": "Proteína C reativa",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "&lt; 10 mg/L",
+              "1": "10 a 49 mg/L",
+              "2": "≥ 50 mg/L"
+            }
+          }
+        ],
+        "hash": "8c1d128c0a5158dd6e7ac3b5077e7314283827f1878953fc7e70ebf6661dedd0"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Andersson M, Andersson RE. The appendicitis inflammatory response score: a tool for the diagnosis of acute appendicitis that outperforms the Alvarado score. World J Surg, 2008.",
+          "url": "https://doi.org/10.1007/s00268-008-9649-y",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "The appendicitis inflammatory response score: a tool for the diagnosis of acute appendicitis that outperforms the Alvarado score.",
+            "year": "2008",
+            "firstPublicationDate": "2008-08-01",
+            "doi": "10.1007/s00268-008-9649-y",
+            "pmid": "18553045",
+            "journal": "World journal of surgery",
+            "authors": "Andersson M, Andersson RE."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/18553045/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "95991ef40305ad37d490a6399781e911216f31c4ad9e3bc49120411ca580b5a6",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Di Saverio S et al. Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines. World J Emerg Surg, 2020.",
+          "url": "https://doi.org/10.1186/s13017-020-00306-3",
+          "class": "primary-publication-full-text-retrieved",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": true,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines.",
+            "year": "2020",
+            "firstPublicationDate": "2020-04-15",
+            "doi": "10.1186/s13017-020-00306-3",
+            "pmid": "32295644",
+            "pmcid": "PMC7386163",
+            "journal": "World journal of emergency surgery : WJES",
+            "authors": "Di Saverio S, Podda M, De Simone B, Ceresoli M, Augustin G, Gori A, Boermeester M, Sartelli M, Coccolini F, Tarasconi A, De' Angelis N, Weber DG, Tolonen M, Birindelli A, Biffl W, Moore EE, Kelly M, Soreide K, Kashuk J, Ten Broek R, Gomes CA, Sugrue M, Davies RJ, Damaskos D, Leppäniemi A, Kirkpatrick A, Peitzman AB, Fraga GP, Maier RV, Coimbra R, Chiarugi M, Sganga G, Pisanu A, De' Angelis GL, Tan E, Van Goor H, Pata F, Di Carlo I, Chiara O, Litvin A, Campanile FC, Sakakushev B, Tomadze G, Demetrashvili Z, Latifi R, Abu-Zidan F, Romeo O, Segovia-Lohse H, Baiocchi G, Costa D, Rizoli S, Balogh ZJ, Bendinelli C, Scalea T, Ivatury R, Velmahos G, Andersson R, Kluger Y, Ansaloni L, Catena F."
+          },
+          "primaryPublicationUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7386163/",
+          "abstractAvailable": true,
+          "fullTextSha256": "5c2a6588ab31e6ad8e23ad9e6d697845109b130d9721688456282935d13f3c47",
+          "abstractSha256": "02d1a7f9b15de63f00daf0b514ceee08be40fc4d6eabdfd8d508dd71360d8ad3",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Andersson M, Andersson RE. Erratum to: The Appendicitis Inflammatory Response Score: A Tool for the Diagnosis of Acute Appendicitis that Outperforms the Alvarado Score. World J Surg, 2012;36:2269–2270. Corrected Tables 2 and 7.",
+          "url": "https://doi.org/10.1007/s00268-012-1679-9",
+          "class": "primary-author-erratum-corrected-tables-directly-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": true,
+          "readScope": "Erratum correction paragraph and corrected Tables2+7 only; original2008 article full text not read.",
+          "formulaConformance": "selected-point-weights-and-units-read; full-method-not-approved",
+          "publication": {
+            "year": "2012",
+            "doi": "10.1007/s00268-012-1679-9"
+          },
+          "primaryPublicationUrl": "https://onlinelibrary.wiley.com/doi/10.1007/s00268-012-1679-9"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T19:14:05.365Z",
+        "total": 864,
+        "passed": 864,
+        "sourceRowCount": 864,
+        "uniqueApiInputCount": 864,
+        "sourceContextCount": 864,
+        "embeddedCasesAreSubset": true,
+        "embeddedCaseCount": 4,
+        "caseStorage": {
+          "mode": "complete-downloadable-bank-with-inline-subset",
+          "file": "independent-source-cases.json",
+          "sha256": "856a85fa46a691657f51e1760e34bfc3686b43657c83f5cfa73d1a7b2f3a9349",
+          "total": 864,
+          "bankRowCount": 864,
+          "uniqueApiInputCount": 864,
+          "sourceContextCount": 864,
+          "expectedEvidence": [
+            {
+              "file": "reports/review-20261003/bode-air-westley-independent-expectations-final27.json",
+              "sha256": "c9e48c4a30ce6274824338a102cb61f780573fafbe6e462205ba7d9312b53da1"
+            },
+            {
+              "file": "reports/review-20261003/bode-air-westley-primary-observations-final27.cjs",
+              "sha256": "52110d475ffed2282f3faad540747cb42330c2aee2727f87ec867c157c824322"
+            }
+          ],
+          "obtainedEvidence": {
+            "file": "reports/review-20261003/bode-air-westley-independent-source-check-final27.json",
+            "sha256": "ee5c83853da827d687151724fd2a6c2e51dfa04543d1dd75e6697ffa5c003622"
+          },
+          "packagingRequirement": "Compose independent source/citation/edition/rubric changes using owned JSON recipes, then bind fresh source/build/package/browser proofs before publication."
+        },
+        "inputIdentity": {
+          "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+          "sourceRows": 864,
+          "uniqueApiInputs": 864,
+          "duplicateRows": 0,
+          "expectationAudit": {
+            "file": "reports/review-20261003/bode-air-westley-independent-expectations-final27.json",
+            "sha256": "c9e48c4a30ce6274824338a102cb61f780573fafbe6e462205ba7d9312b53da1"
+          }
+        },
+        "scope": "864 retained selected-point scenarios: exact raw.score sum of seven previously selected categorical/checkbox inputs according to the directly read author erratum Tables2/7 (2012). No raw clinical measurement classifier, risk band, diagnosis, surgery or 2021 cutoff conformance.",
+        "sources": [
+          {
+            "id": "escore-air-apendicite",
+            "primaryObservations": {
+              "file": "reports/review-20261003/bode-air-westley-primary-observations-final27.cjs",
+              "sha256": "52110d475ffed2282f3faad540747cb42330c2aee2727f87ec867c157c824322"
+            },
+            "sources": [
+              {
+                "doi": "10.1007/s00268-008-9649-y",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/18553045/",
+                "access": "Original2008 abstract read directly; full publisher HTML/PDF resolved to abstract, not complete original article.",
+                "readScope": "Abstract describes545patients,316derivation/229evaluation; eight original explanatory variables grouped into the simplified instrument. Original full table not claimed."
+              },
+              {
+                "doi": "10.1007/s00268-012-1679-9",
+                "url": "https://onlinelibrary.wiley.com/doi/10.1007/s00268-012-1679-9",
+                "access": "Official free-access2012 erratum full HTML available and read directly.",
+                "readScope": "Erratum paragraph and corrected Tables2+7: CRP concentration correction, simplified item weights, units and original0–4/5–8/9–12 groups."
+              },
+              {
+                "doi": "10.1007/s00268-021-06042-2",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8154764/",
+                "access": "Official PMC2021 primary validation article opened directly.",
+                "readScope": "Table1, Patients andMethods, Fig1caption and cutoff-validation paragraph; proposed low cutoff changes from<5 to<4. Not an undocumented substitution for original2008/2012 scoring policy."
+              }
+            ],
+            "scope": "All864 combinations of seven already selected categorical/checkbox point inputs, checking exact integer sum only. Temperature/laboratory units, cutoffs and inclusivity read from corrected2012 primary tables; no raw continuous clinical measurements are classified by this test because the implementation accepts selected categories.",
+            "limitations": "Original2008 full article was inaccessible, but its2012 author erratum corrected scoring tables is directly available. Do not cite uncorrected CRP tables as approved.2021 validation revised the low cutoff and population/context differs; no risk bands, diagnosis, imaging/surgery decisions or predictive performance are approved by categorical-sum replay. Missing/unobserved clinical findings must not be treated as absent by this synthetic coverage.",
+            "fullOriginalRead": false
+          }
+        ],
+        "evidencePath": "reports/review-20261003/bode-air-westley-independent-source-check-final27.json",
+        "evidenceSha256": "ee5c83853da827d687151724fd2a6c2e51dfa04543d1dd75e6697ffa5c003622",
+        "independentPeer": {
+          "status": "passed-scoped-numeric",
+          "evidence": {
+            "file": "reports/review-20261003/bode-air-westley-independent-peer-verify-final27.json",
+            "sha256": "46733e24c64444edfdb18f992c6afca03602c57bd9ea0320bb04b1d1ebf2c64b"
+          },
+          "scope": "Independent source tables/own integer expectations and three adapters in Node/VM/Chromium. Clinical/professional-language/rights/full-method approval not performed."
+        },
+        "recordedAdapterExecutions": 2592,
+        "recordedVmExecutions": 2592,
+        "recordedChromiumExecutions": 2592,
+        "freshAdapterExecutions": 2592,
+        "freshVmExecutions": 2592,
+        "implementations": [
+          {
+            "id": "escore-air-apendicite",
+            "app": "website",
+            "file": "apps/website/private/tool-code/escore-air-apendicite/calculator.js",
+            "sha256": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482"
+          },
+          {
+            "id": "escore-air-apendicite",
+            "app": "dashboard",
+            "file": "apps/dashboard/private/tool-code/escore-air-apendicite/calculator.js",
+            "sha256": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482"
+          },
+          {
+            "id": "escore-air-apendicite",
+            "app": "command-center",
+            "file": "apps/command-center/private/tool-code/escore-air-apendicite/calculator.js",
+            "sha256": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482"
+          }
+        ],
+        "qualifications": [
+          "Original2008 full article was inaccessible, but its2012 author erratum corrected scoring tables is directly available. Do not cite uncorrected CRP tables as approved.2021 validation revised the low cutoff and population/context differs; no risk bands, diagnosis, imaging/surgery decisions or predictive performance are approved by categorical-sum replay. Missing/unobserved clinical findings must not be treated as absent by this synthetic coverage.",
+          "Only numeric raw.score is included in the package replay. Main text, raw quartiles/levels, note/verdict/rows, mortality probabilities, diagnostic or therapeutic decisions are not approved by this scoped bank.",
+          "The complete bank preserves every stored source scenario and exact input identity; mirror/runtime executions do not multiply case counts. Three adapters were actually checked in Node, isolated VM and isolated Chromium in the linked original receipt, and Node/VM were freshly replayed for preparation.",
+          "All 862 historic source fixtures and tolerances remain byte-identical. Four inline records are only a subset of the complete downloadable source bank.",
+          "Source citation/edition/rubric and localized-content amendments are separately owned; this evidence candidate must be composed using its JSON field recipes, not by overwriting subsequently amended catalogs. Fresh build/package/browser checks remain required before publication."
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "metadataPackagingPeer": {
+          "status": "passed",
+          "scope": "Bounded independent review of the original source bank and its metadata/helper. Prospective code rebinding is separately re-executed below and requires the final composition peer; no human approval inferred.",
+          "peer": {
+            "file": "reports/review-20261003/bode-air-westley-bank-metadata-independent-review-western-final27.json",
+            "sha256": "39bf252ecd473902ea653e1b6384d6bc7db6d4a401347abdce3dab4c98e24dc0"
+          },
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed",
+          "fullMethodConformance": "not-performed"
+        },
+        "prospectiveSource27Bindings": [
+          {
+            "file": "apps/website/private/tool-code/escore-air-apendicite/calculator.js",
+            "sha256": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482"
+          },
+          {
+            "file": "apps/dashboard/private/tool-code/escore-air-apendicite/calculator.js",
+            "sha256": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482"
+          },
+          {
+            "file": "apps/command-center/private/tool-code/escore-air-apendicite/calculator.js",
+            "sha256": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482"
+          }
+        ],
+        "prospectiveSource27Replay": {
+          "file": "reports/review-20261003/source27-complete-bank-current-replay-root-r3.json",
+          "sha256": "44c601f27d3d5051a8d55a581381112b58df36c7c4b6cfd24ce1249b263d6a2b"
+        },
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482",
+      "erratum2012SourceAmendment": {
+        "previousMethodVersion": "AIR/Andersson 2008:7 fatores,0–12; PCRmg/L; contexto WSES 2020",
+        "previousLimits": "O AIR de 2008 foi estudado em pessoas admitidas por suspeita de apendicite, com parte da coorte permanecendo em faixa indeterminada e necessitando investigação adicional. Classificação de baixa ou alta probabilidade não dispensa os critérios de avaliação e as definições da versão utilizada. Idades, exclusões e cortes completos exigem o protocolo original ou diretriz correspondente.",
+        "checkedAt": "2026-10-04T19:02:52.269Z",
+        "sourceReview": {
+          "file": "reports/review-20261003/bode-air-westley-primary-observations-final27.cjs",
+          "sha256": "52110d475ffed2282f3faad540747cb42330c2aee2727f87ec867c157c824322",
+          "readScopes": [
+            {
+              "doi": "10.1007/s00268-008-9649-y",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/18553045/",
+              "access": "Original2008 abstract read directly; full publisher HTML/PDF resolved to abstract, not complete original article.",
+              "readScope": "Abstract describes545patients,316derivation/229evaluation; eight original explanatory variables grouped into the simplified instrument. Original full table not claimed."
+            },
+            {
+              "doi": "10.1007/s00268-012-1679-9",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1007/s00268-012-1679-9",
+              "access": "Official free-access2012 erratum full HTML available and read directly.",
+              "readScope": "Erratum paragraph and corrected Tables2+7: CRP concentration correction, simplified item weights, units and original0–4/5–8/9–12 groups."
+            },
+            {
+              "doi": "10.1007/s00268-021-06042-2",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8154764/",
+              "access": "Official PMC2021 primary validation article opened directly.",
+              "readScope": "Table1, Patients andMethods, Fig1caption and cutoff-validation paragraph; proposed low cutoff changes from<5 to<4. Not an undocumented substitution for original2008/2012 scoring policy."
+            }
+          ],
+          "scope": "Direct reading of 2012 corrected Tables2/7 supports selected point categories and units; original2008 full text not read. Only864 selected-input sums have numeric replay; clinical groups, decisions, full-method/rights/professional approval remain not performed."
+        },
+        "authoredText": {
+          "file": "reports/review-20261003/air-erratum-2012-source-details-authored-final27.cjs",
+          "sha256": "495bf091f97aa9ec99f3f3e12eca0b0e8ce20c8d82399ac3b7b3cfdac6966135",
+          "status": "authorial-candidate; independent technical-language peer separately required; not professional approval"
+        },
+        "pointExpectationBank": {
+          "file": "reports/review-20261003/bode-air-westley-independent-expectations-final27.json",
+          "sha256": "c9e48c4a30ce6274824338a102cb61f780573fafbe6e462205ba7d9312b53da1",
+          "component": "AIR selected seven-input integer sum only; no change to independentArithmetic status in this source amendment"
+        },
+        "original2008FullTextRead": false,
+        "corrected2012TablesRead": [
+          "2",
+          "7"
+        ],
+        "later2021LowCutoffSubstituted": false,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "instrumentRightsApproval": "not-performed",
+        "fullMethodApproval": "not-performed"
+      }
+    },
+    "limits": "O AIR de 2008 foi estudado em pessoas admitidas por suspeita de apendicite; parte da coorte permaneceu em faixa indeterminada e necessitou investigação adicional. O artigo original de 2008 foi lido somente pelo resumo. A errata de 2012 foi lida diretamente: suas Tabelas 2 e 7 corrigem as concentrações de PCR e documentam os pontos, as unidades e os grupos originais. A conferência numérica limita-se à soma dos sete componentes já selecionados; não aprova os grupos clínicos nem decisões de diagnóstico, imagem ou cirurgia. A revisão de 2021 propôs baixo risco com escore <4, distinto do grupo original 0–4; essa mudança não foi aplicada nesta edição. Idade mínima, exclusões e protocolo completo não foram confirmados pela leitura do resumo de 2008. Achados não observados não devem ser tratados como ausentes. Revisão clínica e de idiomas por profissionais independentes e autorização de direitos do instrumento não realizadas.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.877Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Resumo não fornece idade mínima, exclusões, cortes numéricos ou pontos de todos os fatores. Descreve oito variáveis iniciais versus sete grupos da implementação, a conferir no artigo completo."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "erratum2012Resolution": {
+        "previousUnresolvedPreserved": [
+          "Resumo não fornece idade mínima, exclusões, cortes numéricos ou pontos de todos os fatores. Descreve oito variáveis iniciais versus sete grupos da implementação, a conferir no artigo completo."
+        ],
+        "resolvedComponent": "Corrected selected-item points and units from Tables2/7; complete2008 inclusion/exclusion/protocol still unread.",
+        "checkedAt": "2026-10-04T19:02:52.269Z",
+        "sourceReview": {
+          "file": "reports/review-20261003/bode-air-westley-primary-observations-final27.cjs",
+          "sha256": "52110d475ffed2282f3faad540747cb42330c2aee2727f87ec867c157c824322",
+          "readScopes": [
+            {
+              "doi": "10.1007/s00268-008-9649-y",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/18553045/",
+              "access": "Original2008 abstract read directly; full publisher HTML/PDF resolved to abstract, not complete original article.",
+              "readScope": "Abstract describes545patients,316derivation/229evaluation; eight original explanatory variables grouped into the simplified instrument. Original full table not claimed."
+            },
+            {
+              "doi": "10.1007/s00268-012-1679-9",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1007/s00268-012-1679-9",
+              "access": "Official free-access2012 erratum full HTML available and read directly.",
+              "readScope": "Erratum paragraph and corrected Tables2+7: CRP concentration correction, simplified item weights, units and original0–4/5–8/9–12 groups."
+            },
+            {
+              "doi": "10.1007/s00268-021-06042-2",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8154764/",
+              "access": "Official PMC2021 primary validation article opened directly.",
+              "readScope": "Table1, Patients andMethods, Fig1caption and cutoff-validation paragraph; proposed low cutoff changes from<5 to<4. Not an undocumented substitution for original2008/2012 scoring policy."
+            }
+          ],
+          "scope": "Direct reading of 2012 corrected Tables2/7 supports selected point categories and units; original2008 full text not read. Only864 selected-input sums have numeric replay; clinical groups, decisions, full-method/rights/professional approval remain not performed."
+        },
+        "authoredText": {
+          "file": "reports/review-20261003/air-erratum-2012-source-details-authored-final27.cjs",
+          "sha256": "495bf091f97aa9ec99f3f3e12eca0b0e8ce20c8d82399ac3b7b3cfdac6966135",
+          "status": "authorial-candidate; independent technical-language peer separately required; not professional approval"
+        },
+        "pointExpectationBank": {
+          "file": "reports/review-20261003/bode-air-westley-independent-expectations-final27.json",
+          "sha256": "c9e48c4a30ce6274824338a102cb61f780573fafbe6e462205ba7d9312b53da1",
+          "component": "AIR selected seven-input integer sum only; no change to independentArithmetic status in this source amendment"
+        },
+        "original2008FullTextRead": false,
+        "corrected2012TablesRead": [
+          "2",
+          "7"
+        ],
+        "later2021LowCutoffSubstituted": false,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "instrumentRightsApproval": "not-performed",
+        "fullMethodApproval": "not-performed"
+      }
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/escore-air-apendicite/calculator.js",
+    "bytes": 5177,
+    "sha256": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "644ce19d28974cf07733da85fc701123b7e285148960731f6b3a4c827cc3f5be",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 4,
+      "sha256": "ee259fa075005f80c720adff5c6422a538dc62c6b6477f9d655b7a00bfd8ca96",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 4,
+      "sha256": "ee259fa075005f80c720adff5c6422a538dc62c6b6477f9d655b7a00bfd8ca96",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

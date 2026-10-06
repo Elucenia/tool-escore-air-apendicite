@@ -100,3 +100,28 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+Low probability (0 to 4)
+
+High with reassessment if symptoms persist, in a patient with assured follow-up.
+
+
+### 2
+
+Indeterminate probability (5 to 8)
+
+Active observation with clinical and laboratory reassessment and/or imaging examination.
+
+
+### 3
+
+High probability (9 to 12)
+
+Surgical evaluation.
+

@@ -1,0 +1,181 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "escore-air-apendicite",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "ac89edef712ed2b8502754b62fc9c3eb54a40304",
+    "oldEngineSha256": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482",
+    "currentEngineSha256": "3c8b43e567890d2b6d0041e9c7d07532dd81ca12ed0b785fd352799af531cc62"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "Dor na FID, defesa leve e leucócitos 10.000–14.900: 3 pontos (baixa)",
+      "input": {
+        "dor": true,
+        "defesa": "1",
+        "neut": "0",
+        "leuco": "1",
+        "pcr": "0",
+        "vomito": false,
+        "temp": false
+      },
+      "publicOutput": {
+        "id": "escore-air-apendicite",
+        "main": [
+          "3",
+          "de 12"
+        ],
+        "label": "Escore AIR",
+        "raw": {
+          "score": 3
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 3,
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "3",
+          "de 12"
+        ],
+        "label": "Escore AIR",
+        "level": "low",
+        "verdict": "Baixa probabilidade (0 a 4)",
+        "note": "Alta com reavaliação se os sintomas persistirem, em paciente com seguimento garantido.",
+        "raw": {
+          "score": 3
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "Vômitos, dor, defesa moderada, neutrófilos 70–84% e PCR 10–49: 6 pontos (indeterminada)",
+      "input": {
+        "vomito": true,
+        "dor": true,
+        "defesa": "2",
+        "neut": "1",
+        "leuco": "0",
+        "pcr": "1",
+        "temp": false
+      },
+      "publicOutput": {
+        "id": "escore-air-apendicite",
+        "main": [
+          "6",
+          "de 12"
+        ],
+        "label": "Escore AIR",
+        "raw": {
+          "score": 6
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 6,
+        "level": "mid"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "6",
+          "de 12"
+        ],
+        "label": "Escore AIR",
+        "level": "mid",
+        "verdict": "Probabilidade indeterminada (5 a 8)",
+        "note": "Observação ativa com reavaliação clínica e laboratorial e/ou exame de imagem.",
+        "raw": {
+          "score": 6
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "Vômitos, dor, defesa intensa, febre, neutrófilos ≥ 85%, leucócitos ≥ 15.000: 10 pontos (alta)",
+      "input": {
+        "vomito": true,
+        "dor": true,
+        "defesa": "3",
+        "temp": true,
+        "neut": "2",
+        "leuco": "2",
+        "pcr": "0"
+      },
+      "publicOutput": {
+        "id": "escore-air-apendicite",
+        "main": [
+          "10",
+          "de 12"
+        ],
+        "label": "Escore AIR",
+        "raw": {
+          "score": 10
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 10,
+        "level": "high"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "10",
+          "de 12"
+        ],
+        "label": "Escore AIR",
+        "level": "high",
+        "verdict": "Alta probabilidade (9 a 12)",
+        "note": "Avaliação cirúrgica.",
+        "raw": {
+          "score": 10
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    }
+  ]
+}

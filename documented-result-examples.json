@@ -1,0 +1,537 @@
+{
+  "id": "escore-air-apendicite",
+  "implementationVersion": "escore-air-apendicite@native-2026-10-05+3c8b43e56789",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "Dor na FID, defesa leve e leucócitos 10.000–14.900: 3 pontos (baixa)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Baixa probabilidade (0 a 4)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Alta com reavaliação se os sintomas persistirem, em paciente com seguimento garantido.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa moderada, neutrófilos 70–84% e PCR 10–49: 6 pontos (indeterminada)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilidade indeterminada (5 a 8)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Observação ativa com reavaliação clínica e laboratorial e/ou exame de imagem.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa intensa, febre, neutrófilos ≥ 85%, leucócitos ≥ 15.000: 10 pontos (alta)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Alta probabilidade (9 a 12)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Avaliação cirúrgica.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "Dor na FID, defesa leve e leucócitos 10.000–14.900: 3 pontos (baixa)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Low probability (0 to 4)",
+            "locale": "en",
+            "template": "documented-authored-533053cd7bedb124db89"
+          },
+          "note": {
+            "text": "High with reassessment if symptoms persist, in a patient with assured follow-up.",
+            "locale": "en",
+            "template": "documented-authored-28ff44356b43b32cefd2"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa moderada, neutrófilos 70–84% e PCR 10–49: 6 pontos (indeterminada)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Indeterminate probability (5 to 8)",
+            "locale": "en",
+            "template": "documented-authored-5f002308d4149f679b0c"
+          },
+          "note": {
+            "text": "Active observation with clinical and laboratory reassessment and/or imaging examination.",
+            "locale": "en",
+            "template": "documented-authored-e25e7f53e0dc03fb7ec0"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa intensa, febre, neutrófilos ≥ 85%, leucócitos ≥ 15.000: 10 pontos (alta)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "High probability (9 to 12)",
+            "locale": "en",
+            "template": "documented-authored-97be4dc1c4de14293b0d"
+          },
+          "note": {
+            "text": "Surgical evaluation.",
+            "locale": "en",
+            "template": "documented-authored-f6b759aafb1b063f7c41"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "Dor na FID, defesa leve e leucócitos 10.000–14.900: 3 pontos (baixa)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Baja probabilidad (0 a 4)",
+            "locale": "es",
+            "template": "documented-authored-533053cd7bedb124db89"
+          },
+          "note": {
+            "text": "Alta con reevaluación si los síntomas persisten, en un paciente con seguimiento garantizado.",
+            "locale": "es",
+            "template": "documented-authored-28ff44356b43b32cefd2"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa moderada, neutrófilos 70–84% e PCR 10–49: 6 pontos (indeterminada)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilidad indeterminada (5 a 8)",
+            "locale": "es",
+            "template": "documented-authored-5f002308d4149f679b0c"
+          },
+          "note": {
+            "text": "Observación activa con reevaluación clínica y de laboratorio y/o examen de imagen.",
+            "locale": "es",
+            "template": "documented-authored-e25e7f53e0dc03fb7ec0"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa intensa, febre, neutrófilos ≥ 85%, leucócitos ≥ 15.000: 10 pontos (alta)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Alta probabilidad (9 a 12)",
+            "locale": "es",
+            "template": "documented-authored-97be4dc1c4de14293b0d"
+          },
+          "note": {
+            "text": "Evaluación quirúrgica.",
+            "locale": "es",
+            "template": "documented-authored-f6b759aafb1b063f7c41"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "Dor na FID, defesa leve e leucócitos 10.000–14.900: 3 pontos (baixa)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Faible probabilité (0 à 4)",
+            "locale": "fr",
+            "template": "documented-authored-533053cd7bedb124db89"
+          },
+          "note": {
+            "text": "Élevée avec réévaluation si les symptômes persistent, chez un patient avec suivi garanti.",
+            "locale": "fr",
+            "template": "documented-authored-28ff44356b43b32cefd2"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa moderada, neutrófilos 70–84% e PCR 10–49: 6 pontos (indeterminada)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilité indéterminée (5 à 8)",
+            "locale": "fr",
+            "template": "documented-authored-5f002308d4149f679b0c"
+          },
+          "note": {
+            "text": "Observation active avec réévaluation clinique et biologique et/ou examen d'imagerie.",
+            "locale": "fr",
+            "template": "documented-authored-e25e7f53e0dc03fb7ec0"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa intensa, febre, neutrófilos ≥ 85%, leucócitos ≥ 15.000: 10 pontos (alta)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Forte probabilité (9 à 12)",
+            "locale": "fr",
+            "template": "documented-authored-97be4dc1c4de14293b0d"
+          },
+          "note": {
+            "text": "Évaluation chirurgicale.",
+            "locale": "fr",
+            "template": "documented-authored-f6b759aafb1b063f7c41"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "Dor na FID, defesa leve e leucócitos 10.000–14.900: 3 pontos (baixa)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Geringe Wahrscheinlichkeit (0 bis 4)",
+            "locale": "de",
+            "template": "documented-authored-533053cd7bedb124db89"
+          },
+          "note": {
+            "text": "Hoch mit erneuter Beurteilung, wenn die Symptome anhalten, bei einem Patienten mit gesichertem Follow-up.",
+            "locale": "de",
+            "template": "documented-authored-28ff44356b43b32cefd2"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa moderada, neutrófilos 70–84% e PCR 10–49: 6 pontos (indeterminada)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Unbestimmte Wahrscheinlichkeit (5 bis 8)",
+            "locale": "de",
+            "template": "documented-authored-5f002308d4149f679b0c"
+          },
+          "note": {
+            "text": "Aktive Beobachtung mit klinischer und laborchemischer Neubewertung und/oder Bildgebung.",
+            "locale": "de",
+            "template": "documented-authored-e25e7f53e0dc03fb7ec0"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa intensa, febre, neutrófilos ≥ 85%, leucócitos ≥ 15.000: 10 pontos (alta)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Hohe Wahrscheinlichkeit (9 bis 12)",
+            "locale": "de",
+            "template": "documented-authored-97be4dc1c4de14293b0d"
+          },
+          "note": {
+            "text": "Chirurgische Beurteilung.",
+            "locale": "de",
+            "template": "documented-authored-f6b759aafb1b063f7c41"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "Dor na FID, defesa leve e leucócitos 10.000–14.900: 3 pontos (baixa)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Bassa probabilità (0 a 4)",
+            "locale": "it",
+            "template": "documented-authored-533053cd7bedb124db89"
+          },
+          "note": {
+            "text": "Alta con rivalutazione se i sintomi persistono, in un paziente con follow-up garantito.",
+            "locale": "it",
+            "template": "documented-authored-28ff44356b43b32cefd2"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa moderada, neutrófilos 70–84% e PCR 10–49: 6 pontos (indeterminada)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilità indeterminata (5 a 8)",
+            "locale": "it",
+            "template": "documented-authored-5f002308d4149f679b0c"
+          },
+          "note": {
+            "text": "Osservazione attiva con rivalutazione clinica e di laboratorio e/o esame di imaging.",
+            "locale": "it",
+            "template": "documented-authored-e25e7f53e0dc03fb7ec0"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa intensa, febre, neutrófilos ≥ 85%, leucócitos ≥ 15.000: 10 pontos (alta)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Alta probabilità (9 a 12)",
+            "locale": "it",
+            "template": "documented-authored-97be4dc1c4de14293b0d"
+          },
+          "note": {
+            "text": "Valutazione chirurgica.",
+            "locale": "it",
+            "template": "documented-authored-f6b759aafb1b063f7c41"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "Dor na FID, defesa leve e leucócitos 10.000–14.900: 3 pontos (baixa)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "احتمال منخفض (0 إلى 4)",
+            "locale": "ar",
+            "template": "documented-authored-533053cd7bedb124db89"
+          },
+          "note": {
+            "text": "مرتفع مع إعادة التقييم إذا استمرت الأعراض، لدى مريض مع متابعة مضمونة.",
+            "locale": "ar",
+            "template": "documented-authored-28ff44356b43b32cefd2"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa moderada, neutrófilos 70–84% e PCR 10–49: 6 pontos (indeterminada)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "احتمال غير محدد (5 إلى 8)",
+            "locale": "ar",
+            "template": "documented-authored-5f002308d4149f679b0c"
+          },
+          "note": {
+            "text": "مراقبة نشطة مع إعادة تقييم سريرية ومخبرية و/أو فحص تصويري.",
+            "locale": "ar",
+            "template": "documented-authored-e25e7f53e0dc03fb7ec0"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa intensa, febre, neutrófilos ≥ 85%, leucócitos ≥ 15.000: 10 pontos (alta)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "احتمال مرتفع (9 إلى 12)",
+            "locale": "ar",
+            "template": "documented-authored-97be4dc1c4de14293b0d"
+          },
+          "note": {
+            "text": "تقييم جراحي.",
+            "locale": "ar",
+            "template": "documented-authored-f6b759aafb1b063f7c41"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "Dor na FID, defesa leve e leucócitos 10.000–14.900: 3 pontos (baixa)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "低概率（0到4）",
+            "locale": "zh",
+            "template": "documented-authored-533053cd7bedb124db89"
+          },
+          "note": {
+            "text": "若症状持续，则重新评估；患者有保证随访。",
+            "locale": "zh",
+            "template": "documented-authored-28ff44356b43b32cefd2"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa moderada, neutrófilos 70–84% e PCR 10–49: 6 pontos (indeterminada)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "概率不确定（5到8）",
+            "locale": "zh",
+            "template": "documented-authored-5f002308d4149f679b0c"
+          },
+          "note": {
+            "text": "积极观察，并进行临床和实验室复评和/或影像学检查。",
+            "locale": "zh",
+            "template": "documented-authored-e25e7f53e0dc03fb7ec0"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa intensa, febre, neutrófilos ≥ 85%, leucócitos ≥ 15.000: 10 pontos (alta)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "高概率（9到12）",
+            "locale": "zh",
+            "template": "documented-authored-97be4dc1c4de14293b0d"
+          },
+          "note": {
+            "text": "外科评估。",
+            "locale": "zh",
+            "template": "documented-authored-f6b759aafb1b063f7c41"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "Dor na FID, defesa leve e leucócitos 10.000–14.900: 3 pontos (baixa)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "低い確率（0から4）",
+            "locale": "ja",
+            "template": "documented-authored-533053cd7bedb124db89"
+          },
+          "note": {
+            "text": "症状が持続する場合は再評価を行う、確実なフォローアップが得られる患者で。",
+            "locale": "ja",
+            "template": "documented-authored-28ff44356b43b32cefd2"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa moderada, neutrófilos 70–84% e PCR 10–49: 6 pontos (indeterminada)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "確定不能な確率（5から8）",
+            "locale": "ja",
+            "template": "documented-authored-5f002308d4149f679b0c"
+          },
+          "note": {
+            "text": "臨床・検査の再評価および/または画像検査を伴う経過観察。",
+            "locale": "ja",
+            "template": "documented-authored-e25e7f53e0dc03fb7ec0"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa intensa, febre, neutrófilos ≥ 85%, leucócitos ≥ 15.000: 10 pontos (alta)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "高い確率（9から12）",
+            "locale": "ja",
+            "template": "documented-authored-97be4dc1c4de14293b0d"
+          },
+          "note": {
+            "text": "外科的評価。",
+            "locale": "ja",
+            "template": "documented-authored-f6b759aafb1b063f7c41"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "Dor na FID, defesa leve e leucócitos 10.000–14.900: 3 pontos (baixa)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "कम संभावना (0 से 4)",
+            "locale": "hi",
+            "template": "documented-authored-533053cd7bedb124db89"
+          },
+          "note": {
+            "text": "लक्षण बने रहने पर पुनर्मूल्यांकन के साथ उच्च, ऐसे रोगी में जिसकी फॉलो-अप सुनिश्चित हो.",
+            "locale": "hi",
+            "template": "documented-authored-28ff44356b43b32cefd2"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa moderada, neutrófilos 70–84% e PCR 10–49: 6 pontos (indeterminada)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "अनिश्चित संभावना (5 से 8)",
+            "locale": "hi",
+            "template": "documented-authored-5f002308d4149f679b0c"
+          },
+          "note": {
+            "text": "नैदानिक और प्रयोगशाला पुनर्मूल्यांकन और/या इमेजिंग जांच के साथ सक्रिय अवलोकन.",
+            "locale": "hi",
+            "template": "documented-authored-e25e7f53e0dc03fb7ec0"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Vômitos, dor, defesa intensa, febre, neutrófilos ≥ 85%, leucócitos ≥ 15.000: 10 pontos (alta)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "उच्च संभावना (9 से 12)",
+            "locale": "hi",
+            "template": "documented-authored-97be4dc1c4de14293b0d"
+          },
+          "note": {
+            "text": "शल्यकीय मूल्यांकन.",
+            "locale": "hi",
+            "template": "documented-authored-f6b759aafb1b063f7c41"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}

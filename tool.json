@@ -305,7 +305,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "AIR de Andersson (2008), com as Tabelas 2 e 7 corrigidas pela errata de 2012: sete componentes, total 0–12, PCR em mg/L; grupos originais 0–4, 5–8 e 9–12. A mudança do corte inferior proposta em 2021 não foi aplicada.",
-    "implementationVersion": "escore-air-apendicite@native-2026-10-03+c4cc43ad97bd",
+    "implementationVersion": "escore-air-apendicite@native-2026-10-05+3c8b43e56789",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/18553045/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -604,7 +604,7 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482",
+      "implementationHash": "3c8b43e567890d2b6d0041e9c7d07532dd81ca12ed0b785fd352799af531cc62",
       "erratum2012SourceAmendment": {
         "previousMethodVersion": "AIR/Andersson 2008:7 fatores,0–12; PCRmg/L; contexto WSES 2020",
         "previousLimits": "O AIR de 2008 foi estudado em pessoas admitidas por suspeita de apendicite, com parte da coorte permanecendo em faixa indeterminada e necessitando investigação adicional. Classificação de baixa ou alta probabilidade não dispensa os critérios de avaliação e as definições da versão utilizada. Idades, exclusões e cortes completos exigem o protocolo original ou diretriz correspondente.",
@@ -654,7 +654,35 @@
         "professionalLanguageApproval": "not-performed",
         "instrumentRightsApproval": "not-performed",
         "fullMethodApproval": "not-performed"
-      }
+      },
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "escore-air-apendicite@native-2026-10-03+c4cc43ad97bd",
+          "previousImplementationHash": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482",
+          "implementationHash": "3c8b43e567890d2b6d0041e9c7d07532dd81ca12ed0b785fd352799af531cc62",
+          "scientificBodySha256": "e85276683115c11c8a08c490b617391606f7137a1aaae50779ecc2e6796ea25d",
+          "metadataContractHash": "8c1d128c0a5158dd6e7ac3b5077e7314283827f1878953fc7e70ebf6661dedd0",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "O AIR de 2008 foi estudado em pessoas admitidas por suspeita de apendicite; parte da coorte permaneceu em faixa indeterminada e necessitou investigação adicional. O artigo original de 2008 foi lido somente pelo resumo. A errata de 2012 foi lida diretamente: suas Tabelas 2 e 7 corrigem as concentrações de PCR e documentam os pontos, as unidades e os grupos originais. A conferência numérica limita-se à soma dos sete componentes já selecionados; não aprova os grupos clínicos nem decisões de diagnóstico, imagem ou cirurgia. A revisão de 2021 propôs baixo risco com escore <4, distinto do grupo original 0–4; essa mudança não foi aplicada nesta edição. Idade mínima, exclusões e protocolo completo não foram confirmados pela leitura do resumo de 2008. Achados não observados não devem ser tratados como ausentes. Revisão clínica e de idiomas por profissionais independentes e autorização de direitos do instrumento não realizadas.",
     "sourceLimitEvidence": {
@@ -725,20 +753,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/escore-air-apendicite/calculator.js",
-    "bytes": 5177,
-    "sha256": "c4cc43ad97bd8da66162380ccf15872d8d6d766ead7ed9648be6b2a4db310482"
+    "bytes": 5382,
+    "sha256": "3c8b43e567890d2b6d0041e9c7d07532dd81ca12ed0b785fd352799af531cc62"
   },
-  "sourceToolSha256": "644ce19d28974cf07733da85fc701123b7e285148960731f6b3a4c827cc3f5be",
+  "sourceToolSha256": "d3f276b12328eca43d46d38186b41eb127b6163222b7507446f337472d59a152",
   "omittedFullReferenceBanks": [
     {
       "rows": 4,
       "sha256": "ee259fa075005f80c720adff5c6422a538dc62c6b6477f9d655b7a00bfd8ca96",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 4,
       "sha256": "ee259fa075005f80c720adff5c6422a538dc62c6b6477f9d655b7a00bfd8ca96",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

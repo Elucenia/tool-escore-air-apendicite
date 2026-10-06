@@ -100,3 +100,28 @@ Resultado da fórmula ou classificação. Interpretação, conduta e aplicabilid
 Apache-2.0 aplica-se somente ao código da ELUCENIA. Os instrumentos, publicações, traduções e dados mantêm os direitos dos respectivos titulares. Preserve LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+As informações abaixo preservam as saídas do método para exemplos sintéticos. Não constituem validação clínica independente.
+
+### 1
+
+Baixa probabilidade (0 a 4)
+
+Alta com reavaliação se os sintomas persistirem, em paciente com seguimento garantido.
+
+
+### 2
+
+Probabilidade indeterminada (5 a 8)
+
+Observação ativa com reavaliação clínica e laboratorial e/ou exame de imagem.
+
+
+### 3
+
+Alta probabilidade (9 a 12)
+
+Avaliação cirúrgica.
+

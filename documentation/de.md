@@ -100,3 +100,28 @@ Ergebnis der Formel oder Klassifikation. Interpretation, Vorgehen und Anwendbark
 Apache-2.0 gilt nur für den ELUCENIA-Code. Die Rechte an Instrumenten, Veröffentlichungen, Übersetzungen und Daten verbleiben bei den jeweiligen Rechteinhabern. Bewahren Sie LICENSE und NOTICE auf.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Dokumentierte Ergebnisse
+
+Die folgenden Angaben bewahren die Ausgaben der Methode für synthetische Beispiele. Sie stellen keine unabhängige klinische Validierung dar.
+
+### 1
+
+Geringe Wahrscheinlichkeit (0 bis 4)
+
+Hoch mit erneuter Beurteilung, wenn die Symptome anhalten, bei einem Patienten mit gesichertem Follow-up.
+
+
+### 2
+
+Unbestimmte Wahrscheinlichkeit (5 bis 8)
+
+Aktive Beobachtung mit klinischer und laborchemischer Neubewertung und/oder Bildgebung.
+
+
+### 3
+
+Hohe Wahrscheinlichkeit (9 bis 12)
+
+Chirurgische Beurteilung.
+

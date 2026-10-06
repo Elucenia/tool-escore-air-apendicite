@@ -100,3 +100,28 @@ Résultat de la formule ou de la classification. L’interprétation, la conduit
 Apache-2.0 s’applique uniquement au code d’ELUCENIA. Les droits sur les instruments, publications, traductions et données restent ceux de leurs titulaires respectifs. Conservez LICENSE et NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Résultats documentés
+
+Les informations ci-dessous conservent les sorties de la méthode pour des exemples synthétiques. Elles ne constituent pas une validation clinique indépendante.
+
+### 1
+
+Faible probabilité (0 à 4)
+
+Élevée avec réévaluation si les symptômes persistent, chez un patient avec suivi garanti.
+
+
+### 2
+
+Probabilité indéterminée (5 à 8)
+
+Observation active avec réévaluation clinique et biologique et/ou examen d'imagerie.
+
+
+### 3
+
+Forte probabilité (9 à 12)
+
+Évaluation chirurgicale.
+
